@@ -1,1 +1,17 @@
-
+[
+  {
+    "title": "Montagna al tramonto",
+    "imageUrl": "https://picsum.photos/id/1015/600/1000",
+    "category": "Natura"
+  },
+  {
+    "title": "Spiaggia al mattino",
+    "imageUrl": "https://picsum.photos/id/1016/600/1000",
+    "category": "Natura"
+  },
+  {
+    "title": "Skyline notturno",
+    "imageUrl": "https://picsum.photos/id/1011/600/1000",
+    "category": "Città"
+  }
+]
