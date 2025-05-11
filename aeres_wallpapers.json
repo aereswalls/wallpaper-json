@@ -1,17 +1,32 @@
 [
   {
-    "title": "Montagna al tramonto",
-    "imageUrl": "https://picsum.photos/id/1015/600/1000",
-    "category": "Natura"
+    "title": "Astro Sky 1",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/images/sky1.jpg",
+    "category": "Astrophotography",
+    "downloads": 0
   },
   {
-    "title": "Spiaggia al mattino",
-    "imageUrl": "https://picsum.photos/id/1016/600/1000",
-    "category": "Natura"
+    "title": "Astro Sky 2",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/images/sky2.jpg",
+    "category": "Astrophotography",
+    "downloads": 0
   },
   {
-    "title": "Skyline notturno",
-    "imageUrl": "https://picsum.photos/id/1011/600/1000",
-    "category": "Città"
+    "title": "Astro Sky 3",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/images/sky3.jpg",
+    "category": "Astrophotography",
+    "downloads": 0
+  },
+  {
+    "title": "Astro Sky 4",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/images/sky4.jpg",
+    "category": "Astrophotography",
+    "downloads": 0
+  },
+  {
+    "title": "Astro Sky 5",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/images/sky5.jpg",
+    "category": "Astrophotography",
+    "downloads": 0
   }
 ]
