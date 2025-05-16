@@ -1,0 +1,23 @@
+[
+  {
+    "id": "archi2",
+    "title": "Architecture 1",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/architecture/archi2.jpg",
+    "category": "Architecture",
+    "downloads": 0
+  },
+  {
+    "id": "archi3",
+    "title": "Architecture 2",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/architecture/archi3.jpg",
+    "category": "Architecture",
+    "downloads": 0
+  },
+  {
+    "id": "archi1",
+    "title": "Architecture 3",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/architecture/archi1.jpg",
+    "category": "Architecture",
+    "downloads": 0
+  }
+]
