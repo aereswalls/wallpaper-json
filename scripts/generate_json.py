@@ -2,7 +2,7 @@ import os
 import json
 
 CATEGORIES = ["astro", "nature", "colors", "stock", "abstract", "architecture"]
-BASE_URL = "https://raw.githubusercontent.com/YOUR_USERNAME/wallpaper-json/main/"
+BASE_URL = "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/"
 
 for category in CATEGORIES:
     path = os.path.join(os.getcwd(), category)
