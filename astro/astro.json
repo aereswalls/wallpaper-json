@@ -1,31 +1,36 @@
 [
   {
-    "title": "Astro Sky 1",
-    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/images/sky1.jpg",
+    "id": "astro1",
+    "title": "Astro 1",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/astro/astro1.jpg",
     "category": "Astrophotography",
     "downloads": 0
   },
   {
-    "title": "Astro Sky 2",
-    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/images/sky2.jpg",
+    "id": "astro2",
+    "title": "Astro 2",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/astro/astro2.jpg",
     "category": "Astrophotography",
     "downloads": 0
   },
   {
-    "title": "Astro Sky 3",
-    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/images/sky3.jpg",
+    "id": "astro3",
+    "title": "Astro 3",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/astro/astro3.jpg",
     "category": "Astrophotography",
     "downloads": 0
   },
   {
-    "title": "Astro Sky 4",
-    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/images/sky4.jpg",
+    "id": "astro4",
+    "title": "Astro 4",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/astro/astro4.jpg",
     "category": "Astrophotography",
     "downloads": 0
   },
   {
-    "title": "Astro Sky 5",
-    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/images/sky5.jpg",
+    "id": "astro5",
+    "title": "Astro 5",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/astro/astro5.jpg",
     "category": "Astrophotography",
     "downloads": 0
   }
