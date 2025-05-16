@@ -1,11 +1,15 @@
 import os
 import json
 
-CATEGORIES = ["nature", "abstract", "astro", "city", "minimal"]
+CATEGORIES = ["astro", "nature", "colors", "stock", "abstract", "architecture"]
 BASE_URL = "https://raw.githubusercontent.com/YOUR_USERNAME/wallpaper-json/main/"
 
 for category in CATEGORIES:
-    files = os.listdir(category)
+    path = os.path.join(os.getcwd(), category)
+    if not os.path.exists(path):
+        continue
+
+    files = os.listdir(path)
     images = [f for f in files if f.lower().endswith((".jpg", ".jpeg", ".png"))]
 
     data = []
@@ -19,5 +23,5 @@ for category in CATEGORIES:
         }
         data.append(entry)
 
-    with open(f"{category}/{category}.json", "w") as f:
+    with open(os.path.join(path, f"{category}.json"), "w") as f:
         json.dump(data, f, indent=2)
