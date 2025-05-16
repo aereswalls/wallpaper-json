@@ -14,8 +14,9 @@ for category in CATEGORIES:
 
     data = []
     for idx, filename in enumerate(images, start=1):
+        file_id = os.path.splitext(filename)[0]  # Use filename (without extension) as ID
         entry = {
-            "id": f"{category}{idx}",
+            "id": file_id,
             "title": f"{category.capitalize()} {idx}",
             "url": f"{BASE_URL}{category}/{filename}",
             "category": category.capitalize(),
