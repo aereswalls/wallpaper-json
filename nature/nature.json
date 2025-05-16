@@ -2,14 +2,14 @@
   {
     "id": "nature1",
     "title": "Nature 1",
-    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature1.jpg",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature14.jpeg",
     "category": "Nature",
     "downloads": 0
   },
   {
     "id": "nature2",
     "title": "Nature 2",
-    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature2.jpg",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature10.png",
     "category": "Nature",
     "downloads": 0
   },
@@ -23,13 +23,27 @@
   {
     "id": "nature4",
     "title": "Nature 4",
-    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature4.jpg",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature1.jpg",
     "category": "Nature",
     "downloads": 0
   },
   {
     "id": "nature5",
     "title": "Nature 5",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature4.jpg",
+    "category": "Nature",
+    "downloads": 0
+  },
+  {
+    "id": "nature6",
+    "title": "Nature 6",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature2.jpg",
+    "category": "Nature",
+    "downloads": 0
+  },
+  {
+    "id": "nature7",
+    "title": "Nature 7",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature5.jpg",
     "category": "Nature",
     "downloads": 0
