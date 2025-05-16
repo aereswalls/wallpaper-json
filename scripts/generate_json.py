@@ -1,8 +1,13 @@
 import os
 import json
+import re
 
 CATEGORIES = ["astro", "nature", "colors", "stock", "abstract", "architecture"]
 BASE_URL = "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/"
+
+def clean_id(filename):
+    name = os.path.splitext(filename)[0]
+    return re.sub(r'[^a-zA-Z0-9_-]', '', name.replace(" ", "_"))
 
 for category in CATEGORIES:
     path = os.path.join(os.getcwd(), category)
@@ -14,7 +19,7 @@ for category in CATEGORIES:
 
     data = []
     for idx, filename in enumerate(images, start=1):
-        file_id = os.path.splitext(filename)[0]  # Use filename (without extension) as ID
+        file_id = clean_id(filename)
         entry = {
             "id": file_id,
             "title": f"{category.capitalize()} {idx}",
