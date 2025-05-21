@@ -15,7 +15,7 @@ for category in CATEGORIES:
         continue
 
     files = os.listdir(path)
-    images = [f for f in files if f.lower().endswith((".jpg", ".jpeg", ".png", "JPG"))]
+    images = [f for f in files if f.lower().endswith((".jpg", ".jpeg", ".png", "JPG", "PNG"))]
 
     data = []
     for idx, filename in enumerate(images, start=1):
