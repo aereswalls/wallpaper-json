@@ -1,6 +1,7 @@
 import os
 import json
 import re
+from datetime import datetime
 
 CATEGORIES = ["astro", "nature", "colors", "stock", "abstract", "architecture"]
 BASE_URL = "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/"
@@ -15,7 +16,7 @@ for category in CATEGORIES:
         continue
 
     files = os.listdir(path)
-    images = [f for f in files if f.lower().endswith((".jpg", ".jpeg", ".png", "JPG", "PNG"))]
+    images = [f for f in files if f.lower().endswith((".jpg", ".jpeg", ".png"))]
 
     data = []
     for idx, filename in enumerate(images, start=1):
@@ -25,7 +26,8 @@ for category in CATEGORIES:
             "title": f"{category.capitalize()} {idx}",
             "url": f"{BASE_URL}{category}/{filename}",
             "category": category.capitalize(),
-            "downloads": 0
+            "date": datetime.today().strftime("%Y-%m-%d"),
+            "downloadCount": 0
         }
         data.append(entry)
 
