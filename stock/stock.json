@@ -56,13 +56,6 @@
     "downloads": 0
   },
   {
-    "id": "pixel9a_2",
-    "title": "Stock 9",
-    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/stock/pixel9a_2.JPG",
-    "category": "Stock",
-    "downloads": 0
-  },
-  {
     "id": "Samsung_Galaxy_S25_Ultra_Wallpaper_9_YTECHB",
     "title": "Stock 10",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/stock/Samsung Galaxy S25 Ultra Wallpaper 9 YTECHB.jpg",
@@ -133,9 +126,9 @@
     "downloads": 0
   },
   {
-    "id": "Samsung_Galaxy_S25_Wallpaper_9_YTECHB",
-    "title": "Stock 20",
-    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/stock/Samsung Galaxy S25 Wallpaper 9 YTECHB.jpg",
+    "id": "pixel9a_2",
+    "title": "Stock 9",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/stock/pixel9a_2.JPG",
     "category": "Stock",
     "downloads": 0
   },
@@ -143,6 +136,13 @@
     "id": "pixel9a_1",
     "title": "Stock 21",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/stock/pixel9a_1.PNG",
+    "category": "Stock",
+    "downloads": 0
+  },
+  {
+    "id": "Samsung_Galaxy_S25_Wallpaper_9_YTECHB",
+    "title": "Stock 20",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/stock/Samsung Galaxy S25 Wallpaper 9 YTECHB.jpg",
     "category": "Stock",
     "downloads": 0
   },
