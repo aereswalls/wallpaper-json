@@ -1,15 +1,7 @@
 [
   {
-    "id": "architecture_id741414",
-    "title": "Architecture 1",
-    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/architecture/architecture_id741414.jpg",
-    "category": "Architecture",
-    "date": "2025-05-21",
-    "downloadCount": 0
-  },
-  {
     "id": "archi2",
-    "title": "Architecture 2",
+    "title": "Architecture 1",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/architecture/archi2.jpg",
     "category": "Architecture",
     "date": "2025-05-21",
@@ -17,7 +9,7 @@
   },
   {
     "id": "archi3",
-    "title": "Architecture 3",
+    "title": "Architecture 2",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/architecture/archi3.jpg",
     "category": "Architecture",
     "date": "2025-05-21",
@@ -25,7 +17,7 @@
   },
   {
     "id": "archi1",
-    "title": "Architecture 4",
+    "title": "Architecture 3",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/architecture/archi1.jpg",
     "category": "Architecture",
     "date": "2025-05-21",
