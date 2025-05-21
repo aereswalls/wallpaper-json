@@ -4,34 +4,39 @@
     "title": "Nature 1",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature3.jpg",
     "category": "Nature",
-    "downloads": 0
+    "date": "2025-05-21",
+    "downloadCount": 0
   },
   {
     "id": "nature1",
     "title": "Nature 2",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature1.jpg",
     "category": "Nature",
-    "downloads": 0
+    "date": "2025-05-21",
+    "downloadCount": 0
   },
   {
     "id": "nature4",
     "title": "Nature 3",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature4.jpg",
     "category": "Nature",
-    "downloads": 0
+    "date": "2025-05-21",
+    "downloadCount": 0
   },
   {
     "id": "nature2",
     "title": "Nature 4",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature2.jpg",
     "category": "Nature",
-    "downloads": 0
+    "date": "2025-05-21",
+    "downloadCount": 0
   },
   {
     "id": "nature5",
     "title": "Nature 5",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/nature/nature5.jpg",
     "category": "Nature",
-    "downloads": 0
+    "date": "2025-05-21",
+    "downloadCount": 0
   }
 ]
