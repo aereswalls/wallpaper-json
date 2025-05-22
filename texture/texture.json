@@ -48,8 +48,16 @@
     "downloadCount": 0
   },
   {
-    "id": "ratih-mandalawangi-5TOwIev_lDA-unsplash",
+    "id": "texture_id8r1hr",
     "title": "Texture 7",
+    "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/texture/texture_id8r1hr.jpg",
+    "category": "Texture",
+    "date": "2025-05-22",
+    "downloadCount": 0
+  },
+  {
+    "id": "ratih-mandalawangi-5TOwIev_lDA-unsplash",
+    "title": "Texture 8",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/texture/ratih-mandalawangi-5TOwIev_lDA-unsplash.jpg",
     "category": "Texture",
     "date": "2025-05-22",
@@ -57,7 +65,7 @@
   },
   {
     "id": "texture_id1459h2",
-    "title": "Texture 8",
+    "title": "Texture 9",
     "url": "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/texture/texture_id1459h2.jpg",
     "category": "Texture",
     "date": "2025-05-22",
