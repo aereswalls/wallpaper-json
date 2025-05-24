@@ -1,6 +1,7 @@
 name: Auto-generate category JSONs
 
 on:
+  workflow_dispatch:  # ✅ Permette l'avvio manuale
   push:
     paths:
       - '**.jpg'
@@ -36,5 +37,3 @@ jobs:
           git add .
           git commit -m "Auto update JSON for new wallpapers" || echo "No changes"
           git push
-
-
