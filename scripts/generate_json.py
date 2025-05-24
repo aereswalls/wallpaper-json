@@ -15,7 +15,7 @@ def clean_id(filename):
 
 def closest_color(requested_color):
     min_colors = {}
-    for key, name in webcolors.css3_names_to_hex.items():
+    for key, name in webcolors.HTML4_NAMES_TO_HEX.items():
         r_c, g_c, b_c = webcolors.hex_to_rgb(name)
         rd = (r_c - requested_color[0]) ** 2
         gd = (g_c - requested_color[1]) ** 2
