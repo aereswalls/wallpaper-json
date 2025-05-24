@@ -1,0 +1,36 @@
+name: Genera JSON da R2
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'json_cloudflare.py'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Esegui script per generare JSON
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python json_cloudflare.py
+
+      - name: Commit e push dei file JSON generati
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add cloudflare_*.json
+          git commit -m "Aggiorna JSON da R2" || echo "Nessuna modifica"
+          git push
