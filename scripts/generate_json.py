@@ -19,22 +19,34 @@ for category in CATEGORIES:
     files = os.listdir(path)
     images = [f for f in files if f.lower().endswith((".jpg", ".jpeg", ".png", ".JPG", ".PNG"))]
 
+    # Carica JSON esistente (se disponibile)
+    json_path = os.path.join(path, f"{category}.json")
+    old_data = {}
+    if os.path.exists(json_path):
+        with open(json_path, "r") as f:
+            try:
+                for item in json.load(f):
+                    old_data[item["id"]] = item
+            except Exception:
+                print(f"⚠️ Errore lettura {json_path}, verrà rigenerato.")
+                old_data = {}
+
     data = []
     for idx, filename in enumerate(images, start=1):
         file_id = clean_id(filename)
+        existing = old_data.get(file_id)
+
         entry = {
             "id": file_id,
             "title": f"{category.capitalize()} {idx}",
             "url": f"{BASE_URL}{category}/{filename}",
             "category": category.capitalize(),
-            "date": datetime.today().strftime("%Y-%m-%d"),
-            "downloadCount": 0
+            "date": existing["date"] if existing else datetime.today().strftime("%Y-%m-%d"),
+            "downloadCount": existing["downloadCount"] if existing else 0
         }
         data.append(entry)
 
-    with open(os.path.join(path, f"{category}.json"), "w") as f:
+    with open(json_path, "w") as f:
         json.dump(data, f, indent=2)
 
     print(f"✅ Generato {category}.json con {len(data)} elementi.")
-
-
