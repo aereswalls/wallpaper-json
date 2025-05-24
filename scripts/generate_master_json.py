@@ -2,8 +2,9 @@ import os
 import json
 import glob
 
-output_file = "cloudflare_master.json"
-json_files = glob.glob("cloudflare_*.json")
+input_dir = "JSON"
+output_file = os.path.join(input_dir, "cloudflare_master.json")
+json_files = glob.glob(os.path.join(input_dir, "cloudflare_*.json"))
 
 all_data = []
 
