@@ -10,6 +10,7 @@ ACCOUNT_ID = "7ceb7dc4a392b285add79f4443a8098a"
 BUCKET_NAME = "aeres-wallpapers"
 REGION = "auto"
 ENDPOINT_URL = f"https://{ACCOUNT_ID}.r2.cloudflarestorage.com"
+PUBLIC_R2_DOMAIN = "https://pub-9479432483c94d3fa988c0a8c61a8614.r2.dev"
 
 ACCESS_KEY_ID = os.getenv("R2_ACCESS_KEY_ID")
 SECRET_ACCESS_KEY = os.getenv("R2_SECRET_ACCESS_KEY")
@@ -54,7 +55,7 @@ for category in CATEGORIES:
         entry = {
             "id": file_id,
             "title": f"{category.capitalize()} {idx}",
-            "url": f"https://{BUCKET_NAME}.r2.cloudflarestorage.com/{obj['Key']}",
+            "url": f"{PUBLIC_R2_DOMAIN}/{obj['Key']}",
             "category": category.capitalize(),
             "date": existing["date"] if existing else datetime.today().strftime("%Y-%m-%d"),
             "downloadCount": existing["downloadCount"] if existing else 0
