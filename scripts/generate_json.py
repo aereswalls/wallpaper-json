@@ -25,6 +25,7 @@ def closest_color(requested_color):
 for category in CATEGORIES:
     path = os.path.join(os.getcwd(), category)
     if not os.path.exists(path):
+        print(f"Cartella non trovata: {path}")
         continue
 
     files = os.listdir(path)
@@ -33,12 +34,14 @@ for category in CATEGORIES:
     data = []
     for idx, filename in enumerate(images, start=1):
         file_path = os.path.join(path, filename)
+        print(f"▶️ Elaborando immagine: {filename}")
         try:
             color_thief = ColorThief(file_path)
             dominant_rgb = color_thief.get_color(quality=1)
             dominant_name = closest_color(dominant_rgb)
+            print(f"   → Colore dominante: {dominant_name} ({dominant_rgb})")
         except Exception as e:
-            print(f"Errore elaborando {filename}: {e}")
+            print(f"⚠️ Errore con {filename}: {e}")
             dominant_name = "unknown"
 
         file_id = clean_id(filename)
@@ -53,5 +56,8 @@ for category in CATEGORIES:
         }
         data.append(entry)
 
-    with open(os.path.join(path, f"{category}.json"), "w") as f:
+    json_path = os.path.join(path, f"{category}.json")
+    with open(json_path, "w") as f:
         json.dump(data, f, indent=2)
+    print(f"✅ File JSON generato: {json_path} ({len(data)} elementi)\n")
+
