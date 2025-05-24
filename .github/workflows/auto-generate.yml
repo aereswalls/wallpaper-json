@@ -6,6 +6,9 @@ on:
       - '**.jpg'
       - '**.jpeg'
       - '**.png'
+      - '**.JPG'
+      - '**.PNG'
+      - '**.JPEG'
       - 'scripts/generate_json.py'
 
 jobs:
