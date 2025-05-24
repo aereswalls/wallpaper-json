@@ -37,6 +37,6 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add cloudflare_*.json
+          git add JSON/cloudflare_*.json
           git commit -m "Aggiorna JSON da R2" || echo "Nessuna modifica"
           git push
