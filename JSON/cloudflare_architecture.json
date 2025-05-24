@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "id": "archi1",
+    "title": "Architecture 1",
+    "url": "https://aeres-wallpapers.r2.cloudflarestorage.com/architecture/archi1.jpg",
+    "category": "Architecture",
+    "date": "2025-05-24",
+    "downloadCount": 0
+  },
+  {
+    "id": "archi2",
+    "title": "Architecture 2",
+    "url": "https://aeres-wallpapers.r2.cloudflarestorage.com/architecture/archi2.jpg",
+    "category": "Architecture",
+    "date": "2025-05-24",
+    "downloadCount": 0
+  },
+  {
+    "id": "archi3",
+    "title": "Architecture 3",
+    "url": "https://aeres-wallpapers.r2.cloudflarestorage.com/architecture/archi3.jpg",
+    "category": "Architecture",
+    "date": "2025-05-24",
+    "downloadCount": 0
+  },
+  {
+    "id": "archi_id01heg",
+    "title": "Architecture 4",
+    "url": "https://aeres-wallpapers.r2.cloudflarestorage.com/architecture/archi_id01heg.jpg",
+    "category": "Architecture",
+    "date": "2025-05-24",
+    "downloadCount": 0
+  },
+  {
+    "id": "archi_id284yf9",
+    "title": "Architecture 5",
+    "url": "https://aeres-wallpapers.r2.cloudflarestorage.com/architecture/archi_id284yf9.jpg",
+    "category": "Architecture",
+    "date": "2025-05-24",
+    "downloadCount": 0
+  },
+  {
+    "id": "archi_id2y4rh5",
+    "title": "Architecture 6",
+    "url": "https://aeres-wallpapers.r2.cloudflarestorage.com/architecture/archi_id2y4rh5.jpg",
+    "category": "Architecture",
+    "date": "2025-05-24",
+    "downloadCount": 0
+  },
+  {
+    "id": "archi_idq7g2r825",
+    "title": "Architecture 7",
+    "url": "https://aeres-wallpapers.r2.cloudflarestorage.com/architecture/archi_idq7g2r825.jpg",
+    "category": "Architecture",
+    "date": "2025-05-24",
+    "downloadCount": 0
+  }
+]
