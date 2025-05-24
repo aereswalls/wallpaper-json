@@ -2,9 +2,12 @@ name: Genera JSON da R2
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'  # esegue ogni giorno a mezzanotte
   push:
     paths:
-      - 'json_cloudflare.py'
+      - 'scripts/json_cloudflare.py'
+      - 'scripts/generate_master_json.py'
 
 jobs:
   build:
@@ -25,10 +28,10 @@ jobs:
       - name: Esegui script per generare JSON per categoria
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: python json_cloudflare.py
+        run: python scripts/json_cloudflare.py
 
       - name: Unifica in cloudflare_master.json
-        run: python generate_master_json.py
+        run: python scripts/generate_master_json.py
 
       - name: Commit e push dei file JSON generati
         run: |
