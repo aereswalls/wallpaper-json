@@ -22,10 +22,13 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Esegui script per generare JSON
+      - name: Esegui script per generare JSON per categoria
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: python json_cloudflare.py
+
+      - name: Unifica in cloudflare_master.json
+        run: python generate_master_json.py
 
       - name: Commit e push dei file JSON generati
         run: |
