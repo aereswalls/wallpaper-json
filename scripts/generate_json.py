@@ -5,6 +5,7 @@ import sys
 from datetime import datetime
 from colorthief import ColorThief
 import webcolors
+from webcolors import CSS3_NAMES_TO_HEX
 
 CATEGORIES = ["astro", "nature", "colors", "stock", "abstract", "architecture", "texture", "dark"]
 BASE_URL = "https://raw.githubusercontent.com/aereswalls/wallpaper-json/main/"
@@ -15,7 +16,7 @@ def clean_id(filename):
 
 def closest_color(requested_color):
     min_colors = {}
-    for key, name in webcolors.CSS3_NAMES_TO_HEX.items():
+    for key, name in CSS3_NAMES_TO_HEX.items():
         r_c, g_c, b_c = webcolors.hex_to_rgb(name)
         rd = (r_c - requested_color[0]) ** 2
         gd = (g_c - requested_color[1]) ** 2
