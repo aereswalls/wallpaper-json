@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import sys
 from datetime import datetime
 from colorthief import ColorThief
 import webcolors
@@ -25,7 +26,8 @@ def closest_color(requested_color):
 for category in CATEGORIES:
     path = os.path.join(os.getcwd(), category)
     if not os.path.exists(path):
-        print(f"Cartella non trovata: {path}")
+        print(f"❌ Cartella non trovata: {path}")
+        sys.stdout.flush()
         continue
 
     files = os.listdir(path)
@@ -35,13 +37,16 @@ for category in CATEGORIES:
     for idx, filename in enumerate(images, start=1):
         file_path = os.path.join(path, filename)
         print(f"▶️ Elaborando immagine: {filename}")
+        sys.stdout.flush()
         try:
             color_thief = ColorThief(file_path)
             dominant_rgb = color_thief.get_color(quality=1)
             dominant_name = closest_color(dominant_rgb)
             print(f"   → Colore dominante: {dominant_name} ({dominant_rgb})")
+            sys.stdout.flush()
         except Exception as e:
             print(f"⚠️ Errore con {filename}: {e}")
+            sys.stdout.flush()
             dominant_name = "unknown"
 
         file_id = clean_id(filename)
@@ -59,5 +64,7 @@ for category in CATEGORIES:
     json_path = os.path.join(path, f"{category}.json")
     with open(json_path, "w") as f:
         json.dump(data, f, indent=2)
+
     print(f"✅ File JSON generato: {json_path} ({len(data)} elementi)\n")
+    sys.stdout.flush()
 
