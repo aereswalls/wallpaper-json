@@ -47,7 +47,7 @@ for category in CATEGORIES:
     filtered = [obj for obj in all_objects if obj["key"].startswith(f"{category}/") and obj["key"].lower().endswith((".jpg", ".jpeg", ".png"))]
 
     old_data = {}
-    json_filename = f"cloudflare_{category}.json"
+    json_filename = os.path.join("JSON", f"cloudflare_{category}.json")
     if os.path.exists(json_filename):
         try:
             with open(json_filename, "r") as f:
