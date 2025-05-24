@@ -1,7 +1,7 @@
 name: Auto-generate category JSONs
 
 on:
-  workflow_dispatch:  # ✅ Permette l'avvio manuale
+  workflow_dispatch:
   push:
     paths:
       - '**.jpg'
@@ -22,10 +22,6 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: 3.x
-
-      - name: Install Python dependencies
-        run: |
-          pip install colorthief webcolors
 
       - name: Generate JSON files
         run: python scripts/generate_json.py
