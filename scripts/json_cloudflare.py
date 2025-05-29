@@ -5,7 +5,7 @@ import boto3
 from datetime import datetime
 
 # CONFIGURAZIONE
-CATEGORIES = ["astro", "nature", "colors", "stock", "abstract", "architecture", "texture", "dark", "cars"]
+CATEGORIES = ["astro", "nature", "colors", "stock", "abstract", "architecture", "texture", "dark", "city", "cars"]
 ACCOUNT_ID = "7ceb7dc4a392b285add79f4443a8098a"
 BUCKET_NAME = "aeres-wallpapers"
 REGION = "auto"
