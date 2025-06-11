@@ -7,7 +7,12 @@ THUMB_SIZE = (720, 1280)
 def crea_thumbnail(input_path, output_path):
     with Image.open(input_path) as img:
         img.thumbnail(THUMB_SIZE)
-        img.save(output_path, format="JPEG", quality=85)
+
+if img.mode in ("RGBA", "P"):
+    img = img.convert("RGB")
+
+img.save(output_path, format="JPEG", quality=85)
+
 
 for category in CATEGORIES:
     input_dir = os.path.join(".", category)
