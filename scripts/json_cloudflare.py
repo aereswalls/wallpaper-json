@@ -34,8 +34,14 @@ for category in CATEGORIES:
     prefix = f"{category}/"
     response = s3.list_objects_v2(Bucket=BUCKET_NAME, Prefix=prefix)
     objects = response.get("Contents", [])
-    images = [obj for obj in objects if obj["Key"].lower().endswith((".jpg", ".jpeg", ".png")) and not "/thumbs/" in obj["Key"]]
 
+    # Lista file immagine (non thumb)
+    images = [
+        obj for obj in objects
+        if obj["Key"].lower().endswith((".jpg", ".jpeg", ".png")) and "/thumbs/" not in obj["Key"]
+    ]
+
+    # Mapping esistente se il JSON già c'è
     old_data = {}
     json_filename = os.path.join(OUTPUT_DIR, f"cloudflare_{category}.json")
     if os.path.exists(json_filename):
@@ -46,27 +52,32 @@ for category in CATEGORIES:
         except Exception:
             print(f"⚠️ Errore lettura {json_filename}, verrà rigenerato.")
 
+    # Lista di tutte le chiavi per verificare le thumb
+    all_keys = [obj["Key"] for obj in objects]
+
     data = []
-    all_keys = [obj["Key"] for obj in objects]  # per cercare i thumbnail
     for idx, obj in enumerate(images, start=1):
         filename = os.path.basename(obj["Key"])
         file_id = clean_id(filename)
         existing = old_data.get(file_id)
 
+        # Thumb
         thumb_key = f"{category}/thumbs/{filename}"
-        thumb_exists = thumb_key in all_keys
+        thumb_url = f"{PUBLIC_R2_DOMAIN}/{thumb_key}" if thumb_key in all_keys else f"{PUBLIC_R2_DOMAIN}/{obj['Key']}"
 
         entry = {
             "id": file_id,
             "title": f"{category.capitalize()} {idx}",
             "url": f"{PUBLIC_R2_DOMAIN}/{obj['Key']}",
-            "thumbnailUrl": f"{PUBLIC_R2_DOMAIN}/{thumb_key}" if thumb_exists else f"{PUBLIC_R2_DOMAIN}/{obj['Key']}",
+            "thumbnailUrl": thumb_url,
             "category": category.capitalize(),
             "date": existing["date"] if existing else datetime.today().strftime("%Y-%m-%d"),
             "downloadCount": existing["downloadCount"] if existing else 0
         }
         data.append(entry)
 
+    # Scrittura JSON
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(json_filename, "w") as f:
         json.dump(data, f, indent=2)
 
