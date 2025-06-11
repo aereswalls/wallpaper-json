@@ -1,0 +1,42 @@
+name: Genera JSON da R2
+
+on:
+  workflow_dispatch: # avvio manuale dal pannello GitHub
+
+jobs:
+  generate-json:
+    runs-on: ubuntu-latest
+
+    env:
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+
+    steps:
+    - name: 📥 Clona il repository
+      uses: actions/checkout@v3
+
+    - name: 🐍 Installa Python + librerie
+      run: |
+        sudo apt-get install libjpeg-dev
+        python -m pip install --upgrade pip
+        pip install boto3 pillow
+
+    - name: 📥 Scarica le immagini da Cloudflare R2
+      run: |
+        python scarica_immagini.py
+
+    - name: 🖼️ Genera i thumbnail
+      run: |
+        python genera_thumbs.py
+
+    - name: 📝 Rigenera i JSON
+      run: |
+        python script_json.py
+
+    - name: ✅ Commit e push JSON aggiornati
+      run: |
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+        git add JSON/*.json
+        git commit -m "🤖 JSON aggiornati automaticamente" || echo "Nessuna modifica"
+        git push
