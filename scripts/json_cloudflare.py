@@ -34,7 +34,7 @@ for category in CATEGORIES:
     prefix = f"{category}/"
     response = s3.list_objects_v2(Bucket=BUCKET_NAME, Prefix=prefix)
     objects = response.get("Contents", [])
-    images = [obj for obj in objects if obj["Key"].lower().endswith((".jpg", ".jpeg", ".png"))]
+    images = [obj for obj in objects if obj["Key"].lower().endswith((".jpg", ".jpeg", ".png")) and not "/thumbs/" in obj["Key"]]
 
     old_data = {}
     json_filename = os.path.join(OUTPUT_DIR, f"cloudflare_{category}.json")
@@ -47,15 +47,20 @@ for category in CATEGORIES:
             print(f"⚠️ Errore lettura {json_filename}, verrà rigenerato.")
 
     data = []
+    all_keys = [obj["Key"] for obj in objects]  # per cercare i thumbnail
     for idx, obj in enumerate(images, start=1):
         filename = os.path.basename(obj["Key"])
         file_id = clean_id(filename)
         existing = old_data.get(file_id)
 
+        thumb_key = f"{category}/thumbs/{filename}"
+        thumb_exists = thumb_key in all_keys
+
         entry = {
             "id": file_id,
             "title": f"{category.capitalize()} {idx}",
             "url": f"{PUBLIC_R2_DOMAIN}/{obj['Key']}",
+            "thumbnailUrl": f"{PUBLIC_R2_DOMAIN}/{thumb_key}" if thumb_exists else f"{PUBLIC_R2_DOMAIN}/{obj['Key']}",
             "category": category.capitalize(),
             "date": existing["date"] if existing else datetime.today().strftime("%Y-%m-%d"),
             "downloadCount": existing["downloadCount"] if existing else 0
@@ -66,3 +71,4 @@ for category in CATEGORIES:
         json.dump(data, f, indent=2)
 
     print(f"✅ Generato {json_filename} con {len(data)} elementi.")
+
