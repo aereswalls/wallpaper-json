@@ -1,7 +1,7 @@
 import os
 from PIL import Image
 
-CATEGORIES = ["astro", "nature", "colors", "stock", "abstract", "architecture", "texture", "dark", "city", "cars"]
+CATEGORIES = ["astro", "nature", "colors", "stock", "abstract", "architecture", "texture", "dark", "city", "cars", "anime"]
 THUMB_SIZE = (720, 1280)
 
 def crea_thumbnail(input_path, output_path):
